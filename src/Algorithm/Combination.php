@@ -9,7 +9,7 @@ abstract class Combination {
         
         $nbEntries = count($entries);
         // Join trees by adding a common root
-        $flattenArray[0] = array('value' => '', 'level' => 0, 'next' => 1, 'offset' => 0, 'next_sibling' => null)
+        $flattenArray[0] = array('value' => '', 'level' => 0, 'next' => 1, 'offset' => 0, 'next_sibling' => null);
         $flattenOffset = 1;
         for($i=0;$i<$nbEntries;$i++){
             // An entry is a final array which contains elements
