@@ -26,5 +26,21 @@ class CombinationTest extends \PHPUnit_Framework_TestCase {
             array('', 'a', 'c', 'g')
             )
         );
+        // Test tree merge
+        $entries1 = array(
+            array('a'),
+            array('c','d')
+        );
+        $entries2 = array(
+            array('b'),
+            array('c')
+        );
+        $c = Combination::combinations($entries1);
+        $c = array_merge($c, Combination::combinations($entries2));
+        $this->assertTrue($c === array(
+            array('', 'a', 'c'),
+            array('', 'a', 'd'),
+            array('', 'b', 'c')
+        ));
     }
 }
