@@ -5,7 +5,7 @@ namespace Algorithm;
 abstract class Combination {
     
     private static function flattenArray($entries){
-        $flattenArray = [];
+        $flattenArray = array();
         
         $nbEntries = count($entries);
         // Join trees by adding a common root
